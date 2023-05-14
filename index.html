@@ -13,7 +13,7 @@
                 <a href="#main" class="brand scroll-link"><img src="img/ds-brand.png" loading="lazy" width="122" /></a>
                 <nav role="navigation" class="nav-menu">
                     <a href="#education-section" class="nav-link scroll-link">Education and skills</a>
-                    <a href="#" class="nav-link">projects</a>
+                    <a href="#projects-section" class="nav-link scroll-link">projects</a>
                     <a href="#" class="nav-link">Contact</a>
                 </nav>
             </div>
@@ -54,9 +54,10 @@
         <section class="education-skills-section" id="education-section">
             <div class="container">
                 <div class="sub-header">Education and skills</div>
+                <h2>A little journey of learning and struggle</h2>
                 <article class="article">
                     <a href="https://www.cct.ie/" target="_blank">
-                        <img src="img/CCT-logo.jpg" loading="lazy" alt="" class="cct-logo" />
+                        <img src="img/CCT-logo.jpg" loading="lazy" alt="" class="bright-img" />
                     </a>
                     <p class="paragraph">
                         I have started my Bachelor of Science (Honours) in Computing and IT at CCT College in Dublin in
@@ -111,28 +112,136 @@
                         loading="lazy" width="50" alt="" class="image-socials"></a>
             </div>
         </section>
-        <section>
+        <section class="projects-description-section" id="projects-section">
             <div class="container">
                 <div class="sub-header">Projects</div>
-                <article class="article projects">
-                    <div>
-                        <img src="img/restaurant-00.jpg" class="img-project" alt="">
-                        <p class="link-projects">https://github.com/dacsantos/brazilrestaurant.git</p>
+                <h2>Some fun projects I have worked on over my years of college</h2>
+                <article class="article projects _2-col-grid">
+                    <div class="project-container">
+                        <p class="title-project"> Restaurant Brazil </p>
+                        <a href="https://dacsantos.github.io/brazilrestaurant/" class="title-project " target="_blank">
+                            <img src="img/restaurant-00.jpg" class="img-project" alt="">
+                        </a>
                     </div>
-                    <div>
-                        <img src="img/concurrency-data-manipulation.jpg" class="img-project" alt="">
-                        <p class="link-projects"> https://github.com/dacsantos/Application_of_Concurrency_to_Common_Tasks.git</p>
-                    </div>
+                    <p class="project-description">
+                        <span style="color: #60e7cc;"> MY VERY FIRST FRONT-END PROJECT</span> <br> A restaurant website
+                        with a login page implementing a user password validator,
+                        a menu page to select the order and display the prices breakdown, separated by vegetarian and
+                        non-vegetarian
+                        options, a customer generator using <a href="https://randomuser.me/"
+                            class="external-link">Ramdom User API</a>, and a kitchen page
+                        showing the food served at the restaurant. A very simple website that I was able to practice and
+                        showcase a
+                        few skills. <br>
+                        <a href="https://github.com/dacsantos/brazilrestaurant.git" class="link-project"
+                            target="_blank"><img src="img/icon-github.png" loading="lazy" width="50" alt=""
+                                class="logo-project" />Check this code out!</a>
 
+
+                    </p>
+                    <div class="project-container">
+                        <p class="title-project"> Mathematical Equations Calculator </p>
+                        <!-- <a href="https://github.com/dacsantos/equationsCalculator.git" class="title-project"
+                            target="_blank">
+                            <img src="img/equations-calc.jpg" class="img-project" alt="">
+                        </a> -->
+                        <div class="project-slideshow img-project">
+                            <div class="images-group fade ">
+                                <img src="img/equations-calc.jpg" style="width:100%">
+                                <div class="text">Login Page</div>
+                            </div>
+
+                            <div class="images-group fade">
+                                <img src="img/equations-calc00.jpg" style="width:100%">
+                                <div class="text">Calculator</div>
+                            </div>
+
+                            <div class="images-group fade">
+                                <img src="img/equations-calc01.jpg" style="width:100%">
+                                <div class="text">History</div>
+                            </div>
+
+                            <!-- Next and previous buttons -->
+                            <a class="prev" onclick="plusImages(-1)">&#10094;</a>
+                            <a class="next" onclick="plusImages(1)">&#10095;</a>
+                        </div>
+                        <br>
+
+                        <!-- The dots/circles -->
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentImage(1)"></span>
+                            <span class="dot" onclick="currentImage(2)"></span>
+                            <span class="dot" onclick="currentImage(3)"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="project-description">
+                            <span style="color: #60e7cc;"> A CALCULATOR FOR SYSTEMS OF LINEAR EQUATIONS</span> <br>
+                            A challenging and rewarding project. Two login options: for the ADMIN and regular USERS;
+                            Ability
+                            to edit users information, and history of all calculations performed in the application. The
+                            core
+                            of the program was the part of the application that performed the mathematical equations,
+                            with two
+                            options to choose from: multiplications of 2x2 or 3x3 matrices, provided by the users.
+                            <br>
+
+                            <a href="https://github.com/dacsantos/equationsCalculator.git" class="link-project"
+                                target="_blank"><img src="img/icon-github.png" loading="lazy" width="50" alt=""
+                                    class="logo-project" />Check this code out!</a>
+                        </p>
+                    </div>
+                    <div class="project-container">
+                        <p class="title-project"> Concurrency Tasks </p>
+                        <a href="https://github.com/dacsantos/Application_of_Concurrency_to_Common_Tasks.git"
+                            class="title-project" target="_blank">
+                            <img src="img/concurrency-data-manipulation.jpg" class="img-project" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="project-description">
+                            <span style="color: #60e7cc;"> APPLICATION OF CONCURRENCY TO COMMON TASKS</span> <br>
+                            A simple console application that imports a csv data set and deals with some operations such
+                            as
+                            finding the standard deviation of the data, multiplying square matrices, and using a
+                            merge-sort
+                            algorithm to sort the data set. <br>
+
+                            <a href="https://github.com/dacsantos/Application_of_Concurrency_to_Common_Tasks.git"
+                                class="link-project" target="_blank"><img src="img/icon-github.png" loading="lazy"
+                                    class="logo-project" />Check this code out!</a>
+                        </p>
+                    </div>
                 </article>
             </div>
-            
+        </section>
+        <section>
+            <div class="container">
+                <div class="sub-header">Contact</div>
+                <h2>Go ahead, let's connect!</h2>
+                <div class="article">
+                    <img src="img/doug-why.png" class="img-contact" alt="">
+                    <div class="">
+                        <h3>Send me a message...</h3>
+
+                        <p class="paragraph"> Job interviews, project enquiries, or just to keep in touch.</p>
+
+                        <form action="https://formsubmit.co/dacsantos@live.com" method="POST">
+                            <input type="text" class="form-input" name="name" placeholder="Your name here" required>
+                            <input type="email" class="form-input" name="email" placeholder="Email Address" required>
+                            <br><input type="text" class="form-input msg-box"name="message" placeholder="Write your message here" required>
+                            <button class="button" type="submit">Send</button>
+                       </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <div class="bg-grads">
         <div class="lighting-top"></div>
         <div class="lighting-right"></div>
         <div class="lighting-left"></div>
+        <div class="lighting-middle"></div>
     </div>
     <script src="js/script.js" type="text/javascript"></script>
 </body>
