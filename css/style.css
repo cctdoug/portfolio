@@ -14,11 +14,15 @@ body {
 
 /* RIGHT - Nav Menu */
 .nav-menu {
+  background-color: #0a192f;
   float: right;
-  position: relative;
-  top: 20px;
+  position: fixed;
+  border-radius: 5%;
+  top: 3px;
+  right: 0;
+  padding: 20px 10px;
+  z-index: 1;
 }
-
 
 .nav-link {
   color: #60e7cc;
@@ -28,7 +32,6 @@ body {
   text-decoration: none;
   padding-left: 15px;
 }
-
 
 /* LEFT - Brand and Side Menu */
 .brand {
@@ -49,8 +52,8 @@ body {
 }
 
 .side-menu .image-socials {
-  width: 30px; 
-  height: 30px; 
+  width: 30px;
+  height: 30px;
   transition: transform 0.4s ease;
 }
 
@@ -58,9 +61,8 @@ body {
   transform: scale(1.5);
 }
 
-
 .side-menu a:not(:last-child) {
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }
 
 .image-socials,
@@ -78,14 +80,6 @@ body {
 
 .link-social:hover {
   opacity: 0.53;
-}
-.nav-menu {
-  background-color: #0a192f;
-  position: fixed;
-  border-radius: 5%;
-  top: 3px;
-  right: 0;
-  padding: 20px 10px;
 }
 
 /* --- First Section (Intro and About me) */
@@ -128,7 +122,6 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -151,19 +144,17 @@ img {
   position: relative;
   z-index: 2;
   transition: opacity 0.2s ease;
-  
 }
 
 .image-hover {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   opacity: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
   transition: opacity 0.2s ease;
-  
 }
 
 .image-wrap:hover .image-hover {
@@ -200,7 +191,6 @@ img {
   margin-bottom: 20px;
   font-size: 26px;
   line-height: 175%;
- 
 }
 
 .heading-about-me {
@@ -236,7 +226,7 @@ img {
   opacity: 1;
   background-color: rgba(30, 59, 119, 0.2);
   border-radius: 10px;
-  grid-template-columns:0.5fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -254,13 +244,14 @@ img {
   opacity: 1;
 }
 
-.paragraph, ul {
+.paragraph,
+ul {
   opacity: 0.5;
   color: #b5b1b0;
   text-align: justify;
   font-size: 16px;
   line-height: 130%;
-  transition: 0.85s ;
+  transition: 0.85s;
 }
 
 .paragraph:hover {
@@ -275,9 +266,8 @@ img {
   gap: 10%;
 }
 
-
 .icons {
-  width: 45px; 
+  width: 45px;
   height: 45px;
   left: calc(-50% + 2px);
   top: calc(-50% + 2px);
@@ -307,7 +297,18 @@ ul:hover {
   opacity: 1;
 }
 
+/* --- Third section */
 
+.projects {
+}
+
+.img-project {
+  max-width: 350px;
+}
+
+.link-projects {
+  color: #b5b1b0;
+}
 /* --- Page lighting */
 .lighting-top {
   position: fixed;
@@ -336,7 +337,7 @@ ul:hover {
   right: -15%;
 }
 
-.lighting-left{
+.lighting-left {
   width: 450px;
   height: 400px;
   opacity: 0.28;
@@ -672,3 +673,89 @@ ul:hover {
     }
   }
    */
+   @media (max-width: 600px) {
+    .nav-menu {
+    top: 0;
+    right: 0;
+    padding: 20px;
+    }
+    
+    .brand {
+    top: 0;
+    padding: 20px;
+    }
+    
+    .side-menu {
+    top: 10%;
+    padding: 20px;
+    }
+    
+    .grid {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    
+    ._2-col-grid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    
+    .heading {
+    font-size: 48px;
+    }
+    
+    .short-intro {
+    font-size: 22px;
+    }
+    
+    .about-text {
+    max-height: none;
+    font-size: 16px;
+    line-height: 120%;
+    }
+    
+    .sub-header {
+    font-size: 18px;
+    margin-top: 50px;
+    }
+    
+    .article {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    }
+    
+    .paragraph,
+    ul {
+    font-size: 14px;
+    line-height: 120%;
+    }
+    
+    .img-project {
+    max-width: 100%;
+    }
+    
+    .lighting-top {
+    width: 200px;
+    height: 200px;
+    top: -20%;
+    left: -5%;
+    }
+    
+    .lighting-right {
+    width: 350px;
+    height: 600px;
+    top: 30%;
+    right: -10%;
+    }
+    
+    .lighting-left {
+    width: 300px;
+    height: 300px;
+    top: 120%;
+    left: -5%;
+    }
+    }
