@@ -3,7 +3,6 @@ body {
   font-family: Ubuntu, Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 /* -----  Main page wraper */
@@ -435,7 +434,6 @@ h3 {
   padding-left: 15px;
 }
 
-
 form {
   display: flex;
   align-items: left;
@@ -453,6 +451,8 @@ form {
 }
 
 #msg-box {
+  font-size: 16px;
+  font-family: Ubuntu, Helvetica, sans-serif;
   width: 410px;
   height: 90px;
   padding: 10px;
@@ -467,13 +467,12 @@ form {
   padding: 5px;
 }
 
-
 .img-contact {
   width: 280px;
 }
 
-.img-contact-text{
-  color:whitesmoke;
+.img-contact-text {
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,14 +548,44 @@ form {
   left: 50%;
 }
 
-/* Thank you page */
-
-#img-thanks{
- width: 20%;
-  
+.lighting-bottom1 {
+  width: 500px;
+  height: 150px;
+  background-color: #60e7cc;
+  opacity: 0.68;
+  filter: blur(90px);
+  position: absolute;
+  top: 500%;
+  left: 50%;
 }
 
-._3-col-grid{
+.lighting-bottom2 {
+  width: 250px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #e572f5;
+  opacity: 0.68;
+  filter: blur(90px);
+  position: absolute;
+  top: 532%;
+  left: 42%;
+}
+
+/* Thank you page */
+
+.body-thanks {
+  background-color: #0a192f;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#img-thanks {
+  width: 20%;
+}
+
+._3-col-grid {
   width: 70%;
   margin-left: 15%;
   opacity: 1;
@@ -569,12 +598,12 @@ form {
 }
 
 .item {
-  text-transform:unset;
+  text-transform: unset;
   color: #60e7cc;
   text-align: center;
 }
 
-#footer{
+#footer {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -582,8 +611,7 @@ form {
   justify-content: center;
 }
 
-.footer-text{
-  color:#60e7cc ;
+.footer-text {
+  color: #60e7cc;
   font-size: 16px;
-
 }
