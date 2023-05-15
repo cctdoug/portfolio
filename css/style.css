@@ -423,6 +423,16 @@ ul li:before {
   }
 }
 
+.project-slideshow .fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.project-slideshow .fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
 /* ----- Fourth Section (Contact) */
 
 h3 {
@@ -494,10 +504,11 @@ form {
 .button:hover {
   background-color: #60e7cc;
   color: #1e3b77;
-  box-shadow: 0 1px 10px #b5b1b0;
+ 
 }
 
 /* --- Page lighting */
+
 .lighting-top {
   position: fixed;
   width: 280px;
@@ -571,7 +582,7 @@ form {
   left: 42%;
 }
 
-/* Thank you page */
+/* ----- Thank you page */
 
 .body-thanks {
   background-color: #0a192f;
