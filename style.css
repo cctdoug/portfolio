@@ -423,6 +423,7 @@ ul li:before {
   }
 }
 
+/* Change images of the slideshow auto */
 .project-slideshow .fade-out {
   opacity: 0;
   transition: opacity 0.5s ease-out;

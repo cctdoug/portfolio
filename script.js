@@ -1,4 +1,4 @@
-// Scrolls smoother when clicking the nav-links
+// ----- Scrolls smoother when clicking the nav-links
 function scrollToSection(event) {
   event.preventDefault();
 
@@ -15,7 +15,7 @@ scrollLinks.forEach((link) => {
   link.addEventListener("click", scrollToSection);
 });
 
-// Slideshow - Project
+// ----- Slideshow - Project
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -42,42 +42,46 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-// Change images of the slideswho overtime
-var images = [];
-var texts = [];
+// ----- Change images of the slideshow auto
+// It didn't work as I expected so I decided to drop it,
+// I will leave it here to work on in and implement it
 
-images[0] = 'img/equations-calc.jpg';
-images[1] = 'img/equations-calc00.jpg';
-images[2] = 'img/equations-calc01.jpg';
+// var images = [];
+// var texts = [];
 
-texts[0] = 'Login Page';
-texts[1] = 'Calculator';
-texts[2] = 'History';
+// images[0] = 'equations-calc.jpg';
+// images[1] = 'equations-calc00.jpg';
+// images[2] = 'equations-calc01.jpg';
 
-var index = 0;
+// texts[0] = 'Login Page';
+// texts[1] = 'Calculator';
+// texts[2] = 'History';
 
-function change() {
-  var slideshow = document.querySelector('.images-group');
-  slideshow.classList.add('fade-out');
+// var index = 0;
 
-  setTimeout(function() {
-    document.getElementById("main-photo").src = images[index];
-    document.getElementById("main-text").textContent = texts[index];
+// function change() {
+//   var slideshow = document.querySelector('.images-group');
+//   slideshow.classList.add('fade-out');
 
-    slideshow.classList.remove('fade-out');
-  }, 500); // Adjust the delay to match the CSS transition duration
+//   setTimeout(function() {
+//     document.getElementById("main-photo").src = images[index];
+//     document.getElementById("main-text").textContent = texts[index];
 
-  if (index == 2) {
-    index = 0;
-  } else {
-    index++;
-  }
+//     slideshow.classList.remove('fade-out');
+//   }, 500);
 
-  setTimeout(change, 3000);
-}
+//   if (index == 2) {
+//     index = 0;
+//   } else {
+//     index++;
+//   }
 
-window.onload = change();
-// Clear placeholder
+//   setTimeout(change, 3000);
+// }
+
+// window.onload = change();
+
+// ----- Clear placeholder
 const input = document.getElementById("msg-box");
 
 input.addEventListener("focus", function () {
