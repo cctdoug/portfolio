@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Santos</title>
@@ -10,11 +11,11 @@
     <div class="page-content-wrapper">
         <section id="main" class="main-section">
             <div class="container-nav-bar">
-                <a href="#main" class="brand scroll-link"><img src="img/ds-brand.png" loading="lazy" width="122" /></a>
+                <a href="#main" class="brand scroll-link"><img src="img/ds-brand.png" loading="lazy" width="125" /></a>
                 <nav role="navigation" class="nav-menu">
                     <a href="#education-section" class="nav-link scroll-link">Education and skills</a>
                     <a href="#projects-section" class="nav-link scroll-link">projects</a>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link scroll-link">Contact</a>
                 </nav>
             </div>
             <div class="container">
@@ -26,7 +27,7 @@
                     </div>
                     <div class="image-wrap">
                         <img src="img/doug-main-00.png" loading="lazy" alt="" class="image-main" />
-                        <img src="img/doug-hover-00.png" loading="lazy" alt="" class="image-hover" />
+                        <img src="img/doug-hover-00.png" loading="lazy" alt="" class="image-back" />
                     </div>
                 </div>
                 <div class="content-wrap-about">
@@ -54,7 +55,7 @@
         <section class="education-skills-section" id="education-section">
             <div class="container">
                 <div class="sub-header">Education and skills</div>
-                <h2>A little journey of learning and struggle</h2>
+                <h2>A wild journey of learning and struggle</h2>
                 <article class="article">
                     <a href="https://www.cct.ie/" target="_blank">
                         <img src="img/CCT-logo.jpg" loading="lazy" alt="" class="bright-img" />
@@ -141,37 +142,22 @@
                     </p>
                     <div class="project-container">
                         <p class="title-project"> Mathematical Equations Calculator </p>
-                        <!-- <a href="https://github.com/dacsantos/equationsCalculator.git" class="title-project"
-                            target="_blank">
-                            <img src="img/equations-calc.jpg" class="img-project" alt="">
-                        </a> -->
-                        <div class="project-slideshow img-project">
+                        <div class="project-slideshow">
                             <div class="images-group fade ">
-                                <img src="img/equations-calc.jpg" style="width:100%">
+                                <img src="img/equations-calc.jpg">
                                 <div class="text">Login Page</div>
                             </div>
-
                             <div class="images-group fade">
-                                <img src="img/equations-calc00.jpg" style="width:100%">
+                                <img src="img/equations-calc00.jpg" id="calc">
                                 <div class="text">Calculator</div>
                             </div>
 
                             <div class="images-group fade">
-                                <img src="img/equations-calc01.jpg" style="width:100%">
+                                <img src="img/equations-calc01.jpg">
                                 <div class="text">History</div>
                             </div>
-
-                            <!-- Next and previous buttons -->
                             <a class="prev" onclick="plusImages(-1)">&#10094;</a>
                             <a class="next" onclick="plusImages(1)">&#10095;</a>
-                        </div>
-                        <br>
-
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentImage(1)"></span>
-                            <span class="dot" onclick="currentImage(2)"></span>
-                            <span class="dot" onclick="currentImage(3)"></span>
                         </div>
                     </div>
                     <div>
@@ -215,22 +201,33 @@
                 </article>
             </div>
         </section>
-        <section>
+        <section id="contact">
             <div class="container">
                 <div class="sub-header">Contact</div>
                 <h2>Go ahead, let's connect!</h2>
-                <div class="article">         
+                <div class="article">
+                    <div>
                         <h3>Send me a message...</h3>
 
-                        <p class="paragraph"> Job interviews, project enquiries, or just to keep in touch.</p>
-
                         <form action="https://formsubmit.co/dacsantos@live.com" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
                             <input type="text" class="form-input" name="name" placeholder="Your name here" required>
                             <input type="email" class="form-input" name="email" placeholder="Email Address" required>
-                            <br><input type="text" class="form-input msg-box"name="message" placeholder="Write your message here" required>
-                            <button class="button" type="submit">Send</button>
-                       </form>
-                    <img src="img/doug-why.png" class="img-contact" alt="">
+                            <textarea type="text" id="msg-box" rows="4" cols="50" name="message"
+                                placeholder="Enter your message here" required></textarea>
+                            <button class="button" type="submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="img-contact-text">
+                        <img src="img/doug-why.png" class="img-contact">
+                        <p class="about-text">...about interviews, project enquiries, or just to say 'Hi!' and how much
+                            you
+                            enjoy this page. I promise to get back to you as soon as possible (in order of importance)!
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -241,6 +238,11 @@
         <div class="lighting-left"></div>
         <div class="lighting-middle"></div>
     </div>
+    <footer id="footer">
+        <div class="footer-container"></div>
+        <p class="footer-text">Website designed by Douglas Santos</p>
+        <p class="footer-text">Dublin - Ireland | 2023</p>
+    </footer>
     <script src="js/script.js" type="text/javascript"></script>
 </body>
 

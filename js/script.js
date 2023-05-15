@@ -1,3 +1,4 @@
+// Scrolls smoother when clicking the nav-links
 function scrollToSection(event) {
   event.preventDefault();
 
@@ -14,6 +15,8 @@ scrollLinks.forEach((link) => {
   link.addEventListener("click", scrollToSection);
 });
 
+
+// Slideshow - Project
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,15 +31,23 @@ function currentImage(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("images-group");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
+   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
+
+// Clear placeholder
+const input = document.getElementById('msg-box');
+
+input.addEventListener('focus', function() {
+  this.placeholder = '';
+});
+
+input.addEventListener('blur', function() {
+  if (!this.value) {
+    this.placeholder = 'Enter your message here';
+  }
+});
