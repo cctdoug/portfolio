@@ -5,7 +5,7 @@
     <title>Douglas Santos </title>
     <meta name="description" content="My Portfolio">
     <meta name="keywords" content="My Portfolio">
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body class="body">
@@ -13,7 +13,8 @@
         <!-- Main section (1) -->
         <section id="main" class="main-section">
             <div class="container-nav-bar">
-                <a href="#main" class="brand scroll-link"><img src="ds-brand.png" loading="lazy" width="125" alt=""></a>
+                <a href="#main" class="brand scroll-link"><img src="img/ds-brand.png" loading="lazy" width="125"
+                        alt=""></a>
                 <nav role="navigation" class="nav-menu">
                     <a href="#education-section" class="nav-link scroll-link">Education and skills</a>
                     <a href="#projects-section" class="nav-link scroll-link">Projects</a>
@@ -28,8 +29,8 @@
                             databases, and new technologies.</p>
                     </div>
                     <div class="image-wrap">
-                        <img src="doug-main-00.png" loading="lazy" class="image-main" />
-                        <img src="doug-hover-00.png" loading="lazy" class="image-back" />
+                        <img src="img/doug-main-00.png" loading="lazy" class="image-main" />
+                        <img src="img/doug-hover-00.png" loading="lazy" class="image-back" />
                     </div>
                 </div>
                 <div class="content-wrap-about">
@@ -61,7 +62,7 @@
                 <h2>A wild journey of learning and struggle</h2>
                 <article class="article">
                     <a href="https://www.cct.ie/" target="_blank">
-                        <img src="CCT-logo.jpg" loading="lazy" class="bright-img" alt="">
+                        <img src="img/CCT-logo.jpg" loading="lazy" class="bright-img" alt="">
                     </a>
                     <p class="paragraph">
                         I have started my Bachelor of Science (Honours) in Computing and IT at CCT College in Dublin in
@@ -115,7 +116,7 @@
                 <a href="mailto:dacsantos@live.com" class="link-social" target="_blank">
                     <img src="icons/icon-email.png" loading="lazy" width="50" class="image-socials">
                 </a>
-                <a href="Douglas_Santos_CV.pdf" class="link-social" target="_blank">
+                <a href="docs/Douglas_Santos_CV.pdf" class="link-social" target="_blank">
                     <img src="icons/icon-cv.png" loading="lazy" width="50" class="image-socials">
                 </a>
             </div>
@@ -127,9 +128,11 @@
                 <h2>Some fun projects I have worked on over my years of college</h2>
                 <article class="article projects _2-col-grid">
                     <div class="project-container">
-                        <p class="title-project"> Restaurant Brazil</p>
-                        <a href="https://dacsantos.github.io/brazilrestaurant/" class="title-project" target="_blank">
-                            <img src="restaurant-00.jpg" class="img-project">
+                        <p class="title-project"> Restaurant Brazil
+                        <h2 style="text-align: center;">(click the image to access the website) </h2>
+                        </p>
+                        <a href="https://dacsantos.github.io/Brazil-Restaurant/" class="title-project" target="_blank">
+                            <img src="img/restaurant-00.jpg" class="img-project">
                         </a>
                     </div>
                     <p class="project-description">
@@ -143,7 +146,7 @@
                         showing the food served at the restaurant. A very simple website that I was able to practice and
                         showcase a
                         few skills. <br>
-                        <a href="https://github.com/dacsantos/brazilrestaurant.git" class="link-project"
+                        <a href="https://github.com/dacsantos/Brazil-Restaurant.git" class="link-project"
                             target="_blank">
                             <img src="icons/icon-github.png" loading="lazy" width="50" class="logo-project" />
                             Check this code out!
@@ -153,15 +156,15 @@
                         <p class="title-project"> Mathematical Equations Calculator</p>
                         <div class="project-slideshow">
                             <div class="images-group fade">
-                                <img src="equations-calc.jpg" id="main-photo">
+                                <img src="img/equations-calc.jpg" id="main-photo">
                                 <div id="main-text" class="text">Login Page</div>
                             </div>
                             <div class="images-group fade">
-                                <img src="equations-calc00.jpg" id="calc">
+                                <img src="img/equations-calc00.jpg" id="calc">
                                 <div class="text">Calculator </div>
                             </div>
                             <div class="images-group fade">
-                                <img src="equations-calc01.jpg">
+                                <img src="img/equations-calc01.jpg">
                                 <div class="text">History</div>
                             </div>
                             <a class="prev" onclick="plusImages(-1)">&#10094;</a>
@@ -190,7 +193,7 @@
                         <p class="title-project"> Concurrency Tasks</p>
                         <a href="https://github.com/dacsantos/Application_of_Concurrency_to_Common_Tasks.git"
                             class="title-project" target="_blank">
-                            <img src="concurrency-data-manipulation.jpg" class="img-project">
+                            <img src="img/concurrency-data-manipulation.jpg" class="img-project">
                         </a>
                     </div>
                     <div>
@@ -220,10 +223,10 @@
                 <div class="article">
                     <div>
                         <h3>Send me a message...</h3>
-                        <form action="https://formsubmit.co/dacsantos@live.com" method="POST">
+                        <form  id="contactForm" action="https://formsubmit.co/2fa477eded23afe88ae0593a791d1898" method="POST">
+                            <input type="hidden" name="_next" value="http://localhost:5500/portfolioProject/message_sent.html">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
                             <input type="text" class="form-input" name="name" placeholder="Your name here" required>
                             <input type="email" class="form-input" name="email" placeholder="Email address" required>
                             <textarea type="text" name="message" id="msg-box" cols="50" rows="4"
@@ -232,11 +235,10 @@
                         </form>
                     </div>
                     <div class="img-contact-text">
-                        <img src="doug-why.png" class="img-contact">
+                        <img src="img/doug-why.png" class="img-contact">
                         <p class="about-text">...about interviews, project enquiries, or just to say 'Hi!' and how much
                             you
-                            enjoyed this page. I promise to get back to you as soon as possible (in order of
-                            importance)!
+                            enjoyed this page. I will get back to you as soon as possible.
                         </p>
                     </div>
                 </div>
@@ -256,7 +258,7 @@
         <p class="footer-text">Website designed by Douglas Santos</p>
         <p class="footer-text">Dublin - Ireland | 2023</p>
     </footer>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

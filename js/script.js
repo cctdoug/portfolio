@@ -30,6 +30,13 @@ function currentImage(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("images-group");
+
+  // Check if slides is not empty
+  if (slides.length === 0) {
+    console.error("No elements with class 'images-group' found.");
+    return;
+  }
+
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -93,3 +100,37 @@ input.addEventListener("blur", function () {
     this.placeholder = "Enter your message here";
   }
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Assuming you're using FormSubmit service
+    var formUrl = "https://formsubmit.co/2fa477eded23afe88ae0593a791d1898";
+    var redirectUrl =
+      "http://localhost:5500/portfolioProject/message_sent.html";
+
+    // Serialize form data
+    var formData = new FormData(event.target);
+
+    // Send form data using Fetch API
+    fetch(formUrl, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        // Check if the form submission was successful
+        if (response.ok) {
+          // Redirect to the specified URL
+          window.location.href = redirectUrl;
+        } else {
+          // Handle errors if needed
+          console.error("Form submission failed");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  });
