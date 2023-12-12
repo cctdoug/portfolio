@@ -17,7 +17,7 @@ scrollLinks.forEach((link) => {
 
 // ----- Heading typing animation
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const strings = ["Hi! I am Douglas!", "Welcome in!", "Have a look around!"];
   let strIndex = 0;
   let charIndex = 0;
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
   function type() {
     if (strIndex < strings.length) {
       const currentString = strings[strIndex];
-      const typedText = document.getElementById('typed-text');
+      const typedText = document.getElementById("typed-text");
 
       if (charIndex < currentString.length) {
         typedText.innerHTML += currentString.charAt(charIndex);
         charIndex++;
         setTimeout(type, 100);
       } else {
-        setTimeout(erase, 2000); 
+        setTimeout(erase, 2000);
       }
     } else {
       // Reset indices and start over
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function erase() {
-    const typedText = document.getElementById('typed-text');
+    const typedText = document.getElementById("typed-text");
     if (typedText.innerHTML.length > 0) {
       typedText.innerHTML = typedText.innerHTML.slice(0, -1);
       setTimeout(erase, 50); // Erasing speed (milliseconds)
@@ -143,6 +143,18 @@ input.addEventListener("blur", function () {
   if (!this.value) {
     this.placeholder = "Enter your message here";
   }
+});
+
+$(document).ready(function () {
+  $("form").submit(function (e) {
+    // Disable all input fields in the form
+    $(this).find(":input").prop("disabled", true);
+    // Disable the submit button
+    $(this).find("input[type=submit]").prop("disabled", true);
+
+    // Show the "Please Wait..." message
+    $("#please_wait").show();
+  });
 });
 
 // Contact section - sending form to email
