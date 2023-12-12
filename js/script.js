@@ -153,7 +153,7 @@ document
     event.preventDefault();
 
     var formUrl = "https://formsubmit.co/dacsantos@live.com";
-    var redirectUrl = "http://localhost:5500/message_sent.html";
+    var redirectUrl = "https://cctdoug.github.io/portfolio/message_sent.html";
 
     // Serialize form data
     var formData = new FormData(event.target);
