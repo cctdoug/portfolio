@@ -15,7 +15,51 @@ scrollLinks.forEach((link) => {
   link.addEventListener("click", scrollToSection);
 });
 
-// ----- Slideshow - Project
+// ----- Heading typing animation
+
+document.addEventListener('DOMContentLoaded', function() {
+  const strings = ["Hi! I am Douglas!", "Welcome in!", "Have a look around!"];
+  let strIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (strIndex < strings.length) {
+      const currentString = strings[strIndex];
+      const typedText = document.getElementById('typed-text');
+
+      if (charIndex < currentString.length) {
+        typedText.innerHTML += currentString.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000); 
+      }
+    } else {
+      // Reset indices and start over
+      strIndex = 0;
+      charIndex = 0;
+      setTimeout(type, 1000); // Delay before typing the first string again
+    }
+  }
+
+  function erase() {
+    const typedText = document.getElementById('typed-text');
+    if (typedText.innerHTML.length > 0) {
+      typedText.innerHTML = typedText.innerHTML.slice(0, -1);
+      setTimeout(erase, 50); // Erasing speed (milliseconds)
+    } else {
+      // Move to the next string
+      strIndex++;
+      charIndex = 0;
+      setTimeout(type, 1000); // Delay before typing the next string
+    }
+  }
+
+  // Start the typing animation
+  type();
+});
+
+// ----- Slideshow - Projects
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -31,7 +75,7 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("images-group");
 
-  // Check if slides is not empty
+  // Check if 'slides' is not empty
   if (slides.length === 0) {
     console.error("No elements with class 'images-group' found.");
     return;
@@ -101,16 +145,15 @@ input.addEventListener("blur", function () {
   }
 });
 
+// Contact section - sending form to email
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
     // Prevent the default form submission
     event.preventDefault();
 
-    // Assuming you're using FormSubmit service
-    var formUrl = "https://formsubmit.co/2fa477eded23afe88ae0593a791d1898";
-    var redirectUrl =
-      "http://localhost:5500/portfolioProject/message_sent.html";
+    var formUrl = "https://formsubmit.co/dacsantos@live.com";
+    var redirectUrl = "http://localhost:5500/message_sent.html";
 
     // Serialize form data
     var formData = new FormData(event.target);
