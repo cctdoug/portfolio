@@ -4,6 +4,7 @@ body-thanks {
   font-family: Ubuntu, Helvetica, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin-top: 0;
 }
 
 /* -----  Main page wraper */
@@ -164,7 +165,7 @@ img {
 
 .image-main {
   width: 80%;
-  top: 1%;
+  top: -5%;
   left: 12%;
 }
 
@@ -593,8 +594,9 @@ form {
 }
 
 .right-top-texture {
-  width: 30%;
-  position: absolute;
+  position: fixed;
+  width: 26%;
+  /* position: absolute; */
   top: 5%;
   left: auto;
   right: -15%;
@@ -809,8 +811,9 @@ form {
   }
 
   .right-top-texture {
-    width: 25%;
-    position: absolute;
+    width: 20%;
+    /* position: absolute; */
+    position: fixed;
     top: 1%;
     left: auto;
     right: -10%;
